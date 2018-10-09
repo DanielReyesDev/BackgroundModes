@@ -7,5 +7,6 @@ target 'BackgroundModes' do
 
   # Pods for BackgroundModes
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 
 end
