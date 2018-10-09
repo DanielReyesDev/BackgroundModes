@@ -1,1 +1,5 @@
 .DS_Store
+Podfile.lock
+/Pods
+BackgroundModes.xcworkspace/
+BackgroundModes.xcodeproj/project.xcworkspace/xcuserdata/*

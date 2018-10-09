@@ -12,9 +12,12 @@
 		3382986B216C4F2400998094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33829869216C4F2400998094 /* Main.storyboard */; };
 		3382986D216C4F2500998094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3382986C216C4F2500998094 /* Assets.xcassets */; };
 		33829870216C4F2500998094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3382986E216C4F2500998094 /* LaunchScreen.storyboard */; };
+		33829879216C54F100998094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33829878216C54F100998094 /* GoogleService-Info.plist */; };
+		FFC16F68897915A3D66F85F1 /* Pods_BackgroundModes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB48C7CE1C0FFC33C87706D9 /* Pods_BackgroundModes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B33270000969DD820B888E /* Pods-BackgroundModes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundModes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundModes/Pods-BackgroundModes.debug.xcconfig"; sourceTree = "<group>"; };
 		33829862216C4F2400998094 /* BackgroundModes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundModes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33829865216C4F2400998094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33829867216C4F2400998094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +26,9 @@
 		3382986F216C4F2500998094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33829871216C4F2500998094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33829877216C545100998094 /* BackgroundModes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundModes.entitlements; sourceTree = "<group>"; };
+		33829878216C54F100998094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7505F3194D2002492BDBAE8F /* Pods-BackgroundModes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundModes.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundModes/Pods-BackgroundModes.release.xcconfig"; sourceTree = "<group>"; };
+		AB48C7CE1C0FFC33C87706D9 /* Pods_BackgroundModes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundModes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC16F68897915A3D66F85F1 /* Pods_BackgroundModes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +48,8 @@
 			children = (
 				33829864216C4F2400998094 /* BackgroundModes */,
 				33829863216C4F2400998094 /* Products */,
+				C11E4D68BA090B2632EDC403 /* Pods */,
+				DAF53B4EFEF1290A96AFF1EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +71,26 @@
 				3382986C216C4F2500998094 /* Assets.xcassets */,
 				3382986E216C4F2500998094 /* LaunchScreen.storyboard */,
 				33829871216C4F2500998094 /* Info.plist */,
+				33829878216C54F100998094 /* GoogleService-Info.plist */,
 			);
 			path = BackgroundModes;
+			sourceTree = "<group>";
+		};
+		C11E4D68BA090B2632EDC403 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12B33270000969DD820B888E /* Pods-BackgroundModes.debug.xcconfig */,
+				7505F3194D2002492BDBAE8F /* Pods-BackgroundModes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DAF53B4EFEF1290A96AFF1EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB48C7CE1C0FFC33C87706D9 /* Pods_BackgroundModes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33829874216C4F2500998094 /* Build configuration list for PBXNativeTarget "BackgroundModes" */;
 			buildPhases = (
+				4AF947D6F9431F2434F89FFA /* [CP] Check Pods Manifest.lock */,
 				3382985E216C4F2400998094 /* Sources */,
 				3382985F216C4F2400998094 /* Frameworks */,
 				33829860216C4F2400998094 /* Resources */,
+				8DB2A203E9DACF44E3D2645D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +162,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				33829870216C4F2500998094 /* LaunchScreen.storyboard in Resources */,
+				33829879216C54F100998094 /* GoogleService-Info.plist in Resources */,
 				3382986D216C4F2500998094 /* Assets.xcassets in Resources */,
 				3382986B216C4F2400998094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AF947D6F9431F2434F89FFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackgroundModes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB2A203E9DACF44E3D2645D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundModes/Pods-BackgroundModes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundModes/Pods-BackgroundModes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3382985E216C4F2400998094 /* Sources */ = {
@@ -288,6 +367,7 @@
 		};
 		33829875216C4F2500998094 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B33270000969DD820B888E /* Pods-BackgroundModes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundModes/BackgroundModes.entitlements;
@@ -310,6 +390,7 @@
 		};
 		33829876216C4F2500998094 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7505F3194D2002492BDBAE8F /* Pods-BackgroundModes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = BackgroundModes/BackgroundModes.entitlements;
