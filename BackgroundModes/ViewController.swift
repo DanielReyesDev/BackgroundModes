@@ -7,18 +7,38 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var payloadLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        getNotificationPayload()
+    }
+    
+    var latestMessage = ""
+    private func getNotificationPayload() {
+        
+        UNUserNotificationCenter.current().getDeliveredNotifications { notifications in
+            for aNotification in notifications{
+                let payload = aNotification.request.content.userInfo
+                //process the payload
+                print(payload)
+                guard let message = payload["message"] as? String else {return}
+                self.latestMessage = message
+            }
+            DispatchQueue.main.sync { /* or .async {} */
+                // update UI
+                self.payloadLabel.text = self.latestMessage
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 
 }

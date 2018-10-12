@@ -57,10 +57,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("FCM token: \(token ?? "")")
     }
 }
-
-
+// Reference: https://www.hackingwithswift.com/example-code/system/how-to-run-code-when-your-app-is-terminated
+// Background fetch will let your app run in the background for about 30 seconds at scheduled intervals.
+// The goal of this is to fetch data and prepare your UI for when the app runs next.
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        print(response)
+    }
+    
+    
+    // iOS10+, called when presenting notification in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        print(notification)
+        
+        completionHandler(UNNotificationPresentationOptions.alert)
+    }
+    
     
 }
 
